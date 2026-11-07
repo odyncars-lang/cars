@@ -3,100 +3,153 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy — Odyn Cars</title>
+<title>Odyn Cars — How this software handles data</title>
 <style>
-  :root {
-    --bg: #ffffff;
-    --fg: #1a1a1a;
-    --muted: #5c5c5c;
-    --rule: #e3e3e3;
-    --accent: #1a4f8a;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #141414;
-      --fg: #ececec;
-      --muted: #a0a0a0;
-      --rule: #2e2e2e;
-      --accent: #7aa8d8;
-    }
-  }
-  * { box-sizing: border-box; }
+  html { background: #f4f2ee; }
   body {
     margin: 0;
-    background: var(--bg);
-    color: var(--fg);
-    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     padding: 16px;
+    color: #23201c;
+    background: #f4f2ee;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 17px;
+    line-height: 1.6;
   }
-  main { max-width: 640px; margin: 64px auto; }
-  h1 { font-size: 1.75rem; margin: 0 0 4px; letter-spacing: -0.015em; }
-  .updated { color: var(--muted); margin: 0 0 40px; font-size: 0.9rem; }
-  h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.07em;
-       color: var(--muted); margin: 36px 0 10px; font-weight: 600; }
-  p { margin: 0 0 14px; }
-  ul { margin: 0 0 14px; padding-left: 22px; }
-  li { margin-bottom: 7px; }
-  a { color: var(--accent); }
-  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--rule);
-           color: var(--muted); font-size: 0.875rem; }
+  .sheet {
+    max-width: 44rem;
+    margin: 56px auto;
+    background: #fffdf9;
+    border: 1px solid #ddd6ca;
+    padding: 40px 44px;
+  }
+  .brandline {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #8a7f6d;
+    margin: 0 0 6px;
+  }
+  h1 {
+    font-size: 2.1rem;
+    font-weight: normal;
+    margin: 0 0 18px;
+    border-bottom: 3px double #ccc3b4;
+    padding-bottom: 14px;
+  }
+  .revised {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px;
+    color: #8a7f6d;
+    margin: -8px 0 28px;
+  }
+  ol.clauses { margin: 0; padding: 0; list-style: none; counter-reset: clause; }
+  ol.clauses > li { counter-increment: clause; margin: 0 0 24px; }
+  ol.clauses > li > h2 {
+    font-size: 1.05rem;
+    font-weight: normal;
+    font-style: italic;
+    margin: 0 0 8px;
+  }
+  ol.clauses > li > h2::before {
+    content: counter(clause) ". ";
+    font-style: normal;
+    color: #8a7f6d;
+  }
+  p { margin: 0 0 12px; }
+  ul.plain { margin: 0 0 12px; padding-left: 20px; }
+  ul.plain li { margin-bottom: 6px; }
+  a { color: #7a4a1d; }
+  .foot {
+    margin-top: 30px;
+    padding-top: 16px;
+    border-top: 1px solid #e8e1d6;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px;
+    color: #8a7f6d;
+  }
+  @media (max-width: 34rem) {
+    .sheet { padding: 26px 20px; margin: 20px auto; }
+  }
 </style>
 </head>
 <body>
-<main>
-  <h1>Privacy Policy</h1>
-  <p class="updated">Odyn Cars · Last updated 7 November 2026</p>
+<div class="sheet">
 
-  <h2>Scope</h2>
-  <p>Odyn Cars is a private automation tool operated by a single individual
-  on their own Google account. It has no users other than its operator, offers
-  no sign-up, and collects no information from anyone else.</p>
+  <p class="brandline">Internal tooling</p>
+  <h1>How this software handles data</h1>
+  <p class="revised">Odyn Cars &middot; revised 7 November 2026</p>
 
-  <h2>Data the application accesses</h2>
-  <p>When authorised, the application accesses the operator's own Google
-  account for two purposes:</p>
-  <ul>
-    <li><strong>Google Drive</strong> — to list files in a designated source
-    folder, download those video files, and move them to an archive folder
-    after processing.</li>
-    <li><strong>YouTube</strong> — to upload those video files to the
-    operator's own YouTube channel.</li>
-  </ul>
-  <p>The application does not read email, contacts, calendars, photos, or any
-  Drive content outside the two folders it is configured to use.</p>
+  <ol class="clauses">
 
-  <h2>How data is handled</h2>
-  <p>Video files are downloaded to the machine running the application,
-  uploaded to YouTube, and deleted from that machine immediately afterwards.
-  No copy is retained.</p>
-  <p>OAuth credentials issued by Google are stored in local token files on the
-  machine running the application, readable only by the operating system
-  account that runs it. They are used solely to authenticate to Google's own
-  APIs.</p>
+    <li>
+      <h2>There are no users besides the operator</h2>
+      <p>This is a scheduled job run by one person against accounts that
+      person owns. Nobody signs up, nothing is collected from visitors to
+      this page, and no cookies are set by it.</p>
+    </li>
 
-  <h2>Data sharing</h2>
-  <p>No data is shared with, sold to, or transmitted to any third party. The
-  application communicates only with Google's APIs. There is no analytics,
-  advertising, or tracking of any kind. This website sets no cookies.</p>
+    <li>
+      <h2>What the software is permitted to touch</h2>
+      <p>Two permissions are requested when the operator authorises the
+      job, and they are used for nothing else:</p>
+      <ul class="plain">
+        <li>Storage access, limited in practice to one folder of
+        pending footage and one folder where published footage is
+        filed afterwards.</li>
+        <li>Video upload, used to publish that footage to the
+        operator's own channel.</li>
+      </ul>
+      <p>Mail, contacts, calendars and the remainder of the operator's
+      storage are never read.</p>
+    </li>
 
-  <h2>Retention</h2>
-  <p>The application maintains no database and stores no personal information.
-  A local plain-text log records file names and timestamps of processing runs,
-  retained on the operator's own machine.</p>
+    <li>
+      <h2>Footage is not kept</h2>
+      <p>A file is fetched to the machine running the job, published, and
+      erased from that machine in the same pass. Nothing is archived
+      locally and nothing is copied anywhere else.</p>
+    </li>
 
-  <h2>Revoking access</h2>
-  <p>Authorisation can be withdrawn at any time from the Google Account
-  permissions page at
-  <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>,
-  which immediately prevents all further access.</p>
+    <li>
+      <h2>Nothing leaves for a third party</h2>
+      <p>The job talks to the storage and video services and to nothing
+      else. There is no analytics, no advertising network, no tracking
+      and no onward transfer of any kind.</p>
+    </li>
 
-  <h2>Contact</h2>
-  <p>Questions about this policy may be sent to
-  <a href="mailto:odyncars@gmail.com">odyncars@gmail.com</a>.</p>
+    <li>
+      <h2>Credentials</h2>
+      <p>Authorisation tokens sit in files on the machine running the
+      job, restricted to the system account that executes it. Their only
+      use is proving to the service provider that the job may act for
+      the operator.</p>
+    </li>
 
-  <footer>
-    <a href="index.html">Back to home</a>
-  </footer>
-</main>
+    <li>
+      <h2>What is written down</h2>
+      <p>A plain text log on the operator's own machine records
+      filenames, timestamps and any errors. There is no database and no
+      personal information in it.</p>
+    </li>
+
+    <li>
+      <h2>Withdrawing permission</h2>
+      <p>The operator can revoke access at any moment from
+      <a href="https://myaccount.google.com/permissions">the account
+      permissions page</a>. Revocation takes effect immediately and the
+      job then fails rather than continuing.</p>
+    </li>
+
+    <li>
+      <h2>Questions</h2>
+      <p>Write to <a href="mailto:odyncars@gmail.com">odyncars@gmail.com</a>.</p>
+    </li>
+
+  </ol>
+
+  <p class="foot"><a href="index.html">&larr; Back</a></p>
+
+</div>
 </body>
 </html>

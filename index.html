@@ -5,67 +5,96 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Odyn Cars</title>
 <style>
-  :root {
-    --bg: #ffffff;
-    --fg: #1a1a1a;
-    --muted: #5c5c5c;
-    --rule: #e3e3e3;
-    --accent: #1a4f8a;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #141414;
-      --fg: #ececec;
-      --muted: #a0a0a0;
-      --rule: #2e2e2e;
-      --accent: #7aa8d8;
-    }
-  }
-  * { box-sizing: border-box; }
+  html { background: #f4f2ee; }
   body {
     margin: 0;
-    background: var(--bg);
-    color: var(--fg);
-    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     padding: 16px;
+    color: #23201c;
+    background: #f4f2ee;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 17px;
+    line-height: 1.6;
   }
-  main { max-width: 640px; margin: 64px auto; }
-  h1 { font-size: 1.75rem; margin: 0 0 4px; letter-spacing: -0.015em; }
-  .tagline { color: var(--muted); margin: 0 0 40px; }
-  h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.07em;
-       color: var(--muted); margin: 36px 0 10px; font-weight: 600; }
-  p { margin: 0 0 14px; }
-  a { color: var(--accent); }
-  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--rule);
-           color: var(--muted); font-size: 0.875rem; }
+  .sheet {
+    max-width: 44rem;
+    margin: 56px auto;
+    background: #fffdf9;
+    border: 1px solid #ddd6ca;
+    padding: 40px 44px;
+  }
+  .brandline {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #8a7f6d;
+    margin: 0 0 6px;
+  }
+  h1 {
+    font-size: 2.1rem;
+    font-weight: normal;
+    margin: 0 0 18px;
+    border-bottom: 3px double #ccc3b4;
+    padding-bottom: 14px;
+  }
+  table.facts { border-collapse: collapse; width: 100%; margin: 0 0 26px; }
+  table.facts th {
+    text-align: left;
+    vertical-align: top;
+    width: 9.5rem;
+    padding: 9px 14px 9px 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #8a7f6d;
+    font-weight: 600;
+    border-bottom: 1px solid #e8e1d6;
+  }
+  table.facts td {
+    padding: 9px 0;
+    border-bottom: 1px solid #e8e1d6;
+  }
+  p { margin: 0 0 16px; }
+  a { color: #7a4a1d; }
+  .foot {
+    margin-top: 30px;
+    padding-top: 16px;
+    border-top: 1px solid #e8e1d6;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px;
+    color: #8a7f6d;
+  }
+  @media (max-width: 34rem) {
+    .sheet { padding: 26px 20px; margin: 20px auto; }
+    table.facts th, table.facts td { display: block; width: auto; border-bottom: none; }
+    table.facts th { padding-bottom: 2px; }
+    table.facts td { padding-top: 0; border-bottom: 1px solid #e8e1d6; padding-bottom: 12px; }
+  }
 </style>
 </head>
 <body>
-<main>
+<div class="sheet">
+
+  <p class="brandline">Internal tooling</p>
   <h1>Odyn Cars</h1>
-  <p class="tagline">An automated video publishing tool for vehicle listings.</p>
 
-  <h2>What it does</h2>
-  <p>Odyn Cars is a private, single-operator utility. It reads car auction
-  videos from a designated Google Drive folder, publishes them to a YouTube
-  channel owned by the same operator, and files the processed videos into an
-  archive folder on Drive.</p>
+  <table class="facts">
+    <tr><th>Purpose</th><td>Moving vehicle listing footage from storage to a video channel on a fixed schedule.</td></tr>
+    <tr><th>Operated by</th><td>One person, on accounts they own.</td></tr>
+    <tr><th>Availability</th><td>Not a product. Nothing to sign up for.</td></tr>
+    <tr><th>Interface</th><td>None. It runs from a scheduler and writes to a log file.</td></tr>
+  </table>
 
-  <p>It runs on a schedule without human supervision. It has no web interface,
-  no user accounts, and no public functionality.</p>
+  <p>Vehicle footage is recorded at inspection, deposited in a storage
+  folder, and published without further handling. The software exists so
+  that step does not need a person at a keyboard each morning.</p>
 
-  <h2>Who it is for</h2>
-  <p>The tool is used by its author only, operating on their own Google Drive
-  and YouTube account. It is not offered as a service and does not accept
-  sign-ups.</p>
+  <p>Enquiries about a particular vehicle, or about this software, go to
+  <a href="mailto:odyncars@gmail.com">odyncars@gmail.com</a>.</p>
 
-  <h2>Contact</h2>
-  <p>For auction and car details, or any question about this application,
-  email <a href="mailto:odyncars@gmail.com">odyncars@gmail.com</a>.</p>
+  <p class="foot"><a href="privacy.html">How this software handles data &rarr;</a></p>
 
-  <footer>
-    <a href="privacy.html">Privacy policy</a>
-  </footer>
-</main>
+</div>
 </body>
 </html>
