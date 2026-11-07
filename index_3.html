@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Odyn Cars</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5c5c5c;
+    --rule: #e3e3e3;
+    --accent: #1a4f8a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141414;
+      --fg: #ececec;
+      --muted: #a0a0a0;
+      --rule: #2e2e2e;
+      --accent: #7aa8d8;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 16px;
+  }
+  main { max-width: 640px; margin: 64px auto; }
+  h1 { font-size: 1.75rem; margin: 0 0 4px; letter-spacing: -0.015em; }
+  .tagline { color: var(--muted); margin: 0 0 40px; }
+  h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.07em;
+       color: var(--muted); margin: 36px 0 10px; font-weight: 600; }
+  p { margin: 0 0 14px; }
+  a { color: var(--accent); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--rule);
+           color: var(--muted); font-size: 0.875rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Odyn Cars</h1>
+  <p class="tagline">An automated video publishing tool for vehicle listings.</p>
+
+  <h2>What it does</h2>
+  <p>Odyn Cars is a private, single-operator utility. It reads car auction
+  videos from a designated Google Drive folder, publishes them to a YouTube
+  channel owned by the same operator, and files the processed videos into an
+  archive folder on Drive.</p>
+
+  <p>It runs on a schedule without human supervision. It has no web interface,
+  no user accounts, and no public functionality.</p>
+
+  <h2>Who it is for</h2>
+  <p>The tool is used by its author only, operating on their own Google Drive
+  and YouTube account. It is not offered as a service and does not accept
+  sign-ups.</p>
+
+  <h2>Contact</h2>
+  <p>For auction and car details, or any question about this application,
+  email <a href="mailto:odyncars@gmail.com">odyncars@gmail.com</a>.</p>
+
+  <footer>
+    <a href="privacy.html">Privacy policy</a>
+  </footer>
+</main>
+</body>
+</html>
